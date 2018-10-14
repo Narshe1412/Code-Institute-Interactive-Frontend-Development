@@ -1,4 +1,8 @@
 describe("Game Logic", () => {
+    it("should run tests", () => {
+        expect(1).toBe(1);
+    })
+
     describe("Game Setup", () => {
         describe("Sequence Generator getSequence()", () => {
             it("should return length of 20 if no parameter is passed", () => {
@@ -51,7 +55,7 @@ describe("Game Logic", () => {
                 let sut = getColor(2);
                 expect(sut).toBe(expectedColor);
             })
-            
+
             it("should return yellow if 3 is passed as parameter", () => {
                 let expectedColor = "Y";
                 let sut = getColor(3);
@@ -63,7 +67,7 @@ describe("Game Logic", () => {
                 let sut = getColor(4);
                 expect(sut).toBe(expectedColor);
             })
-            
+
             it("should return empty if no integer between 1 and 4 is passed", () => {
                 let expectedColor = "";
                 let sut = getColor(9);
