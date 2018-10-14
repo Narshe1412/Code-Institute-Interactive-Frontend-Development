@@ -45,25 +45,25 @@ describe("Game Logic", () => {
         describe("Color generator getColor()", () => {
 
             it("should return red if 1 is passed as parameter", () => {
-                let expectedColor = "R";
+                let expectedColor = "red";
                 let sut = getColor(1);
                 expect(sut).toBe(expectedColor);
             })
 
             it("should return green if 2 is passed as parameter", () => {
-                let expectedColor = "G";
+                let expectedColor = "green";
                 let sut = getColor(2);
                 expect(sut).toBe(expectedColor);
             })
 
             it("should return yellow if 3 is passed as parameter", () => {
-                let expectedColor = "Y";
+                let expectedColor = "yellow";
                 let sut = getColor(3);
                 expect(sut).toBe(expectedColor);
             })
 
             it("should return blue if 4 is passed as parameter", () => {
-                let expectedColor = "B";
+                let expectedColor = "blue";
                 let sut = getColor(4);
                 expect(sut).toBe(expectedColor);
             })

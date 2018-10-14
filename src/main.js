@@ -1,23 +1,22 @@
 $( document ).ready(function() {
 
-    $("#start-btn").click(()=>{
+    startButton.click(()=>{
         startGame();
-        console.log()
     })
     
-    $("#blue-btn").click(()=> {
-        console.log("Blue click")
+    blueButton.click(()=> {
+        setBackground("blue");
     })
 
-    $("#red-btn").click(()=> {
-        console.log("Red click")
+    redButton.click(()=> {
+        setBackground("red");
     })
 
-    $("#yellow-btn").click(()=> {
-        console.log("Yellow click")
+    yellowButton.click(()=> {
+        setBackground("yellow");
     })
 
-    $("#green-btn").click(()=> {
-        console.log("green click")
+    greenButton.click(()=> {
+        setBackground("green");
     })
 });

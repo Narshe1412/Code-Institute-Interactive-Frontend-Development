@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/styles.css" type="text/css" />
     <title>Simon Game</title>
 </head>
@@ -15,22 +16,25 @@
 
     <section id="game">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <button class="bg-red btn btn-lg" id="red-btn">Red</button>
+            <div class="jumbotron" id="game-background">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="bg-red btn btn-lg" id="red-btn">Red</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="bg-green btn btn-lg" id="green-btn">Green</button>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <button class="bg-green btn btn-lg" id="green-btn">Green</button>
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <button class="bg-blue btn btn-lg" id="blue-btn">Blue</button>
+                    </div>
+                    <div class="col-md-6 ">
+                        <button class="bg-yellow btn btn-lg" id="yellow-btn">Yellow</button>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 ">
-                    <button class="bg-blue btn btn-lg" id="blue-btn">Blue</button>
-                </div>
-                <div class="col-md-6 ">
-                    <button class="bg-yellow btn btn-lg" id="yellow-btn">Yellow</button>
-                </div>
-            </div>
+
             <div class="row">
                 <div class="col-md-4">
                     <button id="start-btn">START GAME</button>
@@ -39,9 +43,12 @@
         </div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="src/main.js"></script>
     <script type="text/javascript" src="src/game.js"></script>
     <script type="text/javascript" src="src/ui.js"></script>

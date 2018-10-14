@@ -25,12 +25,13 @@ function setupRules(gameState) {
 }
 
 function startGame(gameState = defaultState) {
-    gameState.currentLevel = 1;
+    gameState.currentLevel = 5; //TODO change to 1 after testing
     gameState.lost = false;
     gameState.canLose = false;
     setupRules(gameState);
     gameState.sequence = generateSequence(gameState.MAXLEVEL);
     console.log(gameState.sequence)
+    playGame(gameState)
 }
 
 function playGame(gameState) {
@@ -38,7 +39,7 @@ function playGame(gameState) {
         let hasFailed = false;
 
         // Computer Turn
-            playSequence(gameState.sequence);
+        playSequence(gameState.sequence, gameState.currentLevel);
         // Player Turn
 
         // Check if player has failed the sequence
@@ -57,8 +58,7 @@ function playGame(gameState) {
                     gameState.sequence = generateSequence(gameState.MAXLEVEL);
                 }
             }
-        }
-        else {
+        } else {
             // Increase a level if sequence is complete
             gameState.currentLevel++;
 
@@ -72,19 +72,24 @@ function playGame(gameState) {
                 winGame();
             }
         }
+        gameState.lost = true; //TODO
     }
 }
 
-function playSequence(sequence) {
-    //TODO Placeholder
+function playSequence(sequence, level) {
+    for (var index = 0; index < level; index++) {
+        setTimeout((item) => {
+            setBackground(sequence[item])
+        }, index * 2000, index);
+    }
 }
 
 function winGame() {
- // TODO Placeholder
+    // TODO Placeholder
 }
 
 function loseGame() {
- // TODO Placeholder
+    // TODO Placeholder
 }
 
 function stopGame() {
@@ -98,8 +103,7 @@ function generateSequence(amount = 20) {
         (amount <= 0) || // If amount is not higher than 1
         (amount % 1 > 0)) { // If amount is not integer
         return sequence;
-    }
-    else {
+    } else {
         for (let i = 0; i < amount; i++) {
             sequence.push(getColor(Math.floor((Math.random() * 4) + 1)));
         }
@@ -108,12 +112,11 @@ function generateSequence(amount = 20) {
 }
 
 function getColor(num) {
-    let gameColors = ["R", "G", "Y", "B"];
-
-    if (num >= 1 && num <= 4) {
-        return gameColors[num - 1];
+    let gameColors = {
+        1: "red",
+        2: "green",
+        3: "yellow",
+        4: "blue"
     }
-    else {
-        return "";
-    }
+    return gameColors[num] ? gameColors[num] : '';
 }
