@@ -1,4 +1,4 @@
-const gameState = {
+const defaultState = {
     currentLevel: 0,
     gameMode: "ladder",
     sequence: [],
@@ -24,12 +24,13 @@ function setupRules(gameState) {
     }
 }
 
-function startGame(gameState) {
+function startGame(gameState = defaultState) {
     gameState.currentLevel = 1;
     gameState.lost = false;
     gameState.canLose = false;
     setupRules(gameState);
     gameState.sequence = generateSequence(gameState.MAXLEVEL);
+    console.log(gameState.sequence)
 }
 
 function playGame(gameState) {
